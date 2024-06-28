@@ -8,16 +8,15 @@ import { cn } from '@/utils';
 	class={cn(
 		'flex',
 		'size-9 rounded-full p-2 items-center justify-center',
-		'bg-transparent hover:bg-black/5 dark:hover:bg-white/20',
+		'hover:bg-black/5 dark:hover:bg-white/20',
 		'stroke-current hover:stroke-black hover:dark:stroke-white',
-		'border border-black/10 dark:border-white/25',
 		'transition-colors duration-300 ease-in-out'
 	)}
 >
-	<svg class="block size-full dark:hidden">
+	<svg class="block size-full bg-transparent dark:hidden">
 		<use href="/ui.svg#sun"></use>
 	</svg>
-	<svg class="hidden size-full dark:block">
+	<svg class="hidden size-full bg-transparent dark:block">
 		<use href="/ui.svg#moon"></use>
 	</svg>
 </button>
