@@ -1,0 +1,31 @@
+---
+import { cn } from '@/utils/clsxm';
+
+import { routes } from './routes';
+
+interface Props {
+	sideBarActiveItemID: string;
+}
+
+const { sideBarActiveItemID } = Astro.props;
+
+const activeClass = 'glass dark:glass-subtle bb '; // For primary color replace with `active` class
+---
+
+<ul class="menu menu-md shrink grow overflow-y-auto">
+	{
+		routes.map((route) => (
+			<li class="">
+				<a
+					href={route.href}
+					id={route.id}
+					class={cn(
+						`rounded-full py-3 text-base hover:bg-white/50 dark:hover:bg-black/60 ${route.id === sideBarActiveItemID && activeClass}`
+					)}
+				>
+					{route.label}
+				</a>
+			</li>
+		))
+	}
+</ul>
