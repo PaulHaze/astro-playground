@@ -12,4 +12,64 @@ export const routes: Route[] = [
 		id: 'home',
 		label: 'Home',
 	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
+	{
+		href: '/projects',
+		id: 'projects',
+		label: 'projects',
+	},
 ];

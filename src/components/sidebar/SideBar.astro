@@ -14,9 +14,9 @@ const { sideBarActiveItemID } = Astro.props;
 <div class="drawer-side z-40">
 	<label for="my-drawer" class="drawer-overlay"></label>
 	<aside
-		class="sidebar-bg flex h-auto min-h-full w-[19rem] flex-col bg-base-300 px-2 pt-2 text-base-content"
+		class="sidebar-bg flex h-auto min-h-full w-[19rem] flex-col bg-base-300 px-0 pt-2 text-base-content"
 	>
-		<div class="overlay"></div>
+		<!-- PROFILE IMAGE -->
 		<div class="mx-auto mb-6 mt-5 w-fit">
 			<a href="/">
 				<div
@@ -35,8 +35,14 @@ const { sideBarActiveItemID } = Astro.props;
 				</div>
 			</a>
 		</div>
+
+		<!-- LINKS -->
 		<SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
-		<div class="bg-gradient-to-b from-transparent to-black/50">
+
+		<!-- FOOTER -->
+		<div
+			class="bg-blur bg-gradient-to-b from-transparent to-base-300 dark:to-black/30"
+		>
 			<SideBarFooter />
 		</div>
 	</aside>
