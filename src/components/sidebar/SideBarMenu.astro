@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { cn } from '@/utils/clsxm';
 
 import { routes } from './routes';
@@ -20,10 +21,11 @@ const activeClass = 'glass dark:glass-subtle bb '; // For primary color replace 
 					href={route.href}
 					id={route.id}
 					class={cn(
-						`rounded-full py-3 text-base hover:bg-white/50 dark:hover:bg-black/60 ${route.id === sideBarActiveItemID && activeClass}`
+						`flex justify-between rounded-full py-3 text-base hover:bg-white/50 dark:hover:bg-black/60 ${route.id === sideBarActiveItemID && activeClass}`
 					)}
 				>
 					{route.label}
+					{route.icon && <Icon name={route.icon} />}
 				</a>
 			</li>
 		))

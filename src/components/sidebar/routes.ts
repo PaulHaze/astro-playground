@@ -11,5 +11,6 @@ export const routes: Route[] = [
 		href: '/',
 		id: 'home',
 		label: 'Home',
+		icon: 'home',
 	},
 ];
