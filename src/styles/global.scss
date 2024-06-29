@@ -26,6 +26,20 @@
 }
 
 @layer utilities {
+	.dark-gradient {
+		background: linear-gradient(
+			transparent 0%,
+			transparent 37%,
+			rgba(0, 0, 0, 0.2) 100%
+		);
+	}
+	.light-gradient {
+		background: linear-gradient(
+			transparent 0%,
+			transparent 57%,
+			rgba(0, 0, 0, 0.1) 100%
+		);
+	}
 	.bb {
 		@apply border border-red-600 sm:border-blue-600 md:border-green-600 lg:border-black;
 	}
