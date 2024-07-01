@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-	* {
-	}
 	h1 {
 		@apply text-4xl font-normal leading-normal;
 	}

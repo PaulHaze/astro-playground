@@ -10,7 +10,7 @@ interface Props {
 
 const { sideBarActiveItemID } = Astro.props;
 
-const activeClass = 'glass dark:glass-subtle bb '; // For primary color replace with `active` class
+const activeClass = 'glass dark:glass-subtle'; // For primary color replace with `active` class
 ---
 
 <ul class="menu menu-md shrink grow space-y-2 overflow-y-auto px-4">
@@ -21,7 +21,7 @@ const activeClass = 'glass dark:glass-subtle bb '; // For primary color replace 
 					href={route.href}
 					id={route.id}
 					class={cn(
-						`flex justify-between rounded-full py-3 text-base hover:bg-white/50 dark:hover:bg-black/60 ${route.id === sideBarActiveItemID && activeClass}`
+						`flex justify-between rounded py-3 hover:bg-white/50 dark:hover:bg-black/60 ${route.id === sideBarActiveItemID && activeClass}`
 					)}
 				>
 					{route.label}
