@@ -2,7 +2,9 @@ import type { Config } from 'tailwindcss';
 import typographyPlugin from '@tailwindcss/typography';
 import daisyui from 'daisyui';
 
-import themes from 'daisyui/src/theming/themes';
+// Uncomment this to customise themes via the spread operator
+// eg: ...themes.dark
+// import themes from 'daisyui/src/theming/themes';
 
 import plugin from 'tailwindcss/plugin';
 
@@ -47,8 +49,15 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Add any custom theme variables from below here
-				// "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
+				primary: {
+					muted: 'oklch(var(--primary-muted) / <alpha-value>)',
+				},
+				base: {
+					DEFAULT: 'oklch(var(--base-100-oklch) / <alpha-value>)',
+					100: 'oklch(var(--base-100-oklch) / <alpha-value>)',
+					// 200: 'oklch(var(--base-200-oklch) / <alpha-value>)',
+					// 300: 'oklch(var(--base-300-oklch) / <alpha-value>)',
+				},
 			},
 			minWidth: {
 				xs: '431px',
@@ -150,7 +159,17 @@ export default {
 		themes: [
 			{
 				light: {
-					...themes.light,
+					primary: '#71c4ef',
+					secondary: '#d4eaf7',
+					accent: '#00668c',
+					neutral: '#454b4e',
+					'base-100': '#fffefb',
+					'base-200': '#f5f4f1',
+					'base-300': '#edede9',
+					'--primary-muted-oklch': '83.24% 0.029 231.52',
+					'--base-100-oklch': '99.7% 0.004 91.45',
+					// '--base-200-oklch': '96.71% 0.004 91.45',
+					// '--base-300-oklch': '84.2% 0.004 91.45',
 					/* 
 					*EXAMPLE - ESSENTIAL
 					"primary": "#a991f7",
@@ -200,13 +219,19 @@ export default {
 			},
 			{
 				dark: {
-					...themes.dark,
-
+					primary: '#4d648d',
+					secondary: '#1F3A5F',
+					accent: '#cee8ff',
+					neutral: '#454b4e',
+					'base-100': '#0F1C2E',
+					'base-200': '#1f2b3e',
+					'base-300': '#374357',
+					'--primary-muted-oklch': '81.3% 0.068 264.49',
+					'--base-100-oklch': '22.45% 0.04 256.74',
 					//* Custom colour variables can also be added.
 					//* Use the OKLCH colour space
 					//* Add the variable to Tailwind
-
-					// '--primary-muted-oklch': '48.11% 0.1667 272.93',
+					// '--primary-muted-oklch': '83.24% 0.029 231.52',
 				},
 			},
 		],
