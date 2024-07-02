@@ -49,9 +49,7 @@ export default {
 		},
 		extend: {
 			colors: {
-				primary: {
-					muted: 'oklch(var(--primary-muted) / <alpha-value>)',
-				},
+				'primary-muted': 'oklch(var(--primary-muted-oklch) / <alpha-value>)',
 				base: {
 					DEFAULT: 'oklch(var(--base-100-oklch) / <alpha-value>)',
 					100: 'oklch(var(--base-100-oklch) / <alpha-value>)',
