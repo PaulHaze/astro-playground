@@ -10,8 +10,20 @@ export default [
 	...tseslint.configs.stylistic,
 	...eslintPluginAstro.configs.recommended,
 	{
+		// our own additional config
+		languageOptions: {
+			parser: tseslint.parser,
+		},
+		files: ['*.ts', '*.tsx'],
+		plugins: {
+			// additional plugins
+		},
+		rules: {},
+	},
+	{
 		// override/add rules settings here, such as:
 		// "astro/no-set-html-directive": "error"
 		// 'no-unused-vars': 'warn'
+		'@typescript-eslint/consistent-type-definitions': ['error', 'type'],
 	},
 ];

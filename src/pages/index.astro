@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import { SITE_TITLE } from '@/config';
 ---
 
-<BaseLayout title="Astro Playground" sideBarActiveItemID="home">
+<BaseLayout title={SITE_TITLE} sideBarActiveItemID="home">
 	<main class="flex w-full flex-col items-center justify-center pt-10">
-		<div class="relative h-40 w-80 overflow-hidden rounded-lg bg-secondary">
-			<div class="absolute h-full w-1.5 bg-accent"></div>
-		</div>
+		<h1>Get Building!</h1>
 	</main>
 </BaseLayout>
