@@ -1,10 +1,10 @@
-type Route = {
+interface Route {
 	href: string;
 	id: string;
 	label: string;
 	icon?: string;
 	target?: string;
-};
+}
 
 export const routes: Route[] = [
 	{

@@ -18,12 +18,40 @@
 	h5 {
 		@apply text-lg font-normal leading-normal;
 	}
+	.bg-primary * {
+		@apply text-primary-content/90;
+	}
+	.bg-secondary * {
+		@apply text-secondary-content/90;
+	}
+	.bg-accent * {
+		@apply text-accent-content;
+	}
+	.bg-neutral * {
+		@apply text-neutral-content;
+	}
+	.bg-info * {
+		@apply text-info-content/90;
+	}
+	.bg-success * {
+		@apply text-success-content/90;
+	}
+	.bg-warning * {
+		@apply text-warning-content/90;
+	}
+	.bg-error * {
+		@apply text-error-content/90;
+	}
 }
 
 @layer components {
 }
 
 @layer utilities {
+	.glass-subtle {
+		--glass-opacity: 0.1;
+		@apply glass;
+	}
 	.dark-gradient {
 		background: linear-gradient(
 			transparent 0%,
