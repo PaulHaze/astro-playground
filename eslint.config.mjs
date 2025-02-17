@@ -10,7 +10,7 @@ export default [
 	...tseslint.configs.stylistic,
 	...eslintPluginAstro.configs.recommended,
 	{
-		// TS specific rules
+		// our own additional config
 		languageOptions: {
 			parser: tseslint.parser,
 		},
