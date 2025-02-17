@@ -8,4 +8,8 @@ import icon from 'astro-icon';
 export default defineConfig({
 	vite: { plugins: [tailwindcss()] },
 	integrations: [react(), icon()],
+	experimental: {
+		responsiveImages: true,
+		svg: true,
+	},
 });
