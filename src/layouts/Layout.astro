@@ -4,6 +4,9 @@ import '@fontsource/anton';
 
 import BaseHead from '@/components/layout/BaseHead.astro';
 import Header from '@/components/ui/Header.astro';
+import SideBar from '@/components/sidebar/SideBar.astro';
+
+import { ClientRouter } from 'astro:transitions';
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from '@/config';
 
@@ -11,7 +14,6 @@ interface Props {
 	image?: string;
 	title?: string;
 	description?: string;
-	includeSidebar?: boolean;
 	sideBarActiveItemID: string;
 }
 
@@ -19,7 +21,6 @@ const {
 	image,
 	title = SITE_TITLE,
 	description = SITE_DESCRIPTION,
-	includeSidebar = true,
 	sideBarActiveItemID,
 } = Astro.props;
 
@@ -30,9 +31,18 @@ import '@/styles/main.css';
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} image={image} />
+		{TRANSITION_API && <ClientRouter />}
 	</head>
-	<body class="relative">
-		<Header title="Playground" />
-		<slot />
+	<body class="relative min-h-screen">
+		<div class="drawer lg:drawer-open">
+			<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+			<div class="drawer-content bg-base-100 flex min-h-screen flex-col">
+				<Header title={SITE_TITLE} />
+				<main class="max-w-sxl mx-auto">
+					<slot />
+				</main>
+			</div>
+			<SideBar sideBarActiveItemID={sideBarActiveItemID} />
+		</div>
 	</body>
 </html>
