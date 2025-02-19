@@ -15,13 +15,11 @@ updates:
     commit-message:
       prefix: 'chore(deps)'
     rebase-strategy: 'auto'
-    labels:
-      - 'dependencies'
-    allow:
+   allow:
       - dependency-type: 'direct'
       - dependency-type: 'development'
     reviewers:
       - 'PaulHaze'
     labels:
-    - 'dependencies'
-  - 'automerge'
+      - 'dependencies'
+      - 'automerge'
