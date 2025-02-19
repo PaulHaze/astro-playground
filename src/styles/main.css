@@ -107,7 +107,7 @@
 
 @plugin "daisyui" {
 	root: ':root';
-	include: button, glass, typography, navbar, drawer;
+	include: button, menu, glass, typography, navbar, drawer;
 	logs: true;
 }
 
