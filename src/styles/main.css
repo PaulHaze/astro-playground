@@ -37,7 +37,7 @@
 	/* change % value to anything else to remove divider effect */
 	--glass-opacity: 0.2;
 	--glass-reflect-degree: 105deg;
-	--glass-reflect-opacity: 0.1;
+	--glass-reflect-opacity: 0.05;
 	--glass-border-opacity: 0.1;
 	--glass-text-shadow-opacity: 0.1;
 }
@@ -118,6 +118,8 @@
 	default: false;
 	prefersdark: false;
 	color-scheme: 'dark';
+	--img-overlay: rgba(0, 0, 0, 0.1);
+	--overlay-base: rgba(0, 0, 0, 0.7);
 	--color-base-100: oklch(20.768% 0.039 265.754);
 	--color-base-200: oklch(19.314% 0.037 265.754);
 	--color-base-300: oklch(17.86% 0.034 265.754);
@@ -153,6 +155,8 @@
 	default: false;
 	prefersdark: false;
 	color-scheme: 'light';
+	--img-overlay: rgba(255, 255, 255, 0.75);
+	--overlay-base: #d7f3fd;
 	--color-base-100: oklch(100% 0 0);
 	--color-base-200: oklch(93% 0 0);
 	--color-base-300: oklch(86% 0 0);

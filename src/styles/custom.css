@@ -47,3 +47,11 @@
 		--op: 0.3;
 	}
 }
+
+/* SIDEBAR */
+.sidebar-bg {
+	@apply relative z-0 blur;
+	background-image:
+		linear-gradient(to bottom, var(--overlay-base), var(--overlay-base)),
+		url('/img/rkt_bg.jpeg');
+}
