@@ -22,8 +22,3 @@ updates:
       - dependency-type: 'development'
     reviewers:
       - 'PaulHaze'
-    automated-updates:
-      - auto-merge: true
-        allowed-updates:
-          - update-type: 'minor'
-          - update-type: 'patch'
