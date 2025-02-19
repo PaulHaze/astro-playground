@@ -1,0 +1,13 @@
+@property --op {
+	syntax: '<number>';
+	inherits: false;
+	initial-value: 0.1;
+}
+.glass-subtle {
+	--glass-opacity: var(--op);
+	transition: --op 0.5s;
+	@apply glass;
+	&:hover {
+		--op: 0.3;
+	}
+}
