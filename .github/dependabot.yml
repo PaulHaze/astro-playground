@@ -22,3 +22,6 @@ updates:
       - dependency-type: 'development'
     reviewers:
       - 'PaulHaze'
+    labels:
+  - 'dependencies'
+  - 'automerge'
