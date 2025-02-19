@@ -15,7 +15,7 @@ updates:
     commit-message:
       prefix: 'chore(deps)'
     rebase-strategy: 'auto'
-   allow:
+    allow:
       - dependency-type: 'direct'
       - dependency-type: 'development'
     reviewers:
