@@ -1,7 +1,8 @@
 @import 'tailwindcss';
+
 @import './custom.css';
 
-@variant dark (&: where([data-theme= 'dark'] *));
+@variant dark (&:where([data-theme= 'dark'] *));
 
 @theme inline {
 	/* Custom Fonts */
@@ -34,11 +35,11 @@
 	/* DaisyUI Glass Variables */
 	--glass-blur: 10px;
 	/* change % value to anything else to remove divider effect */
-	--glass-opacity: 20%;
+	--glass-opacity: 0.2;
 	--glass-reflect-degree: 105deg;
-	--glass-reflect-opacity: 4%;
-	--glass-border-opacity: 10%;
-	--glass-text-shadow-opacity: 10%;
+	--glass-reflect-opacity: 0.1;
+	--glass-border-opacity: 0.1;
+	--glass-text-shadow-opacity: 0.1;
 }
 
 @layer base {
