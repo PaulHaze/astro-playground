@@ -3,22 +3,36 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
+# version: 2
+# updates:
+#   - package-ecosystem: 'npm' # See documentation for possible values
+#     directory: '/' # Location of package manifests
+#     schedule:
+#       interval: 'weekly'
+#     open-pull-requests-limit: 25
+#     pull-request-branch-name:
+#       separator: '-'
+#     commit-message:
+#       prefix: 'chore(deps)'
+#     rebase-strategy: 'auto'
+#     allow:
+#       - dependency-type: 'direct'
+#       - dependency-type: 'development'
+#     versioning-strategy: increase-if-necessary
+#     labels:
+#       - 'dependencies'
+#       - 'automerge'
+
 version: 2
 updates:
-  - package-ecosystem: 'npm' # See documentation for possible values
-    directory: '/' # Location of package manifests
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
       interval: 'weekly'
-    open-pull-requests-limit: 25
-    pull-request-branch-name:
-      separator: '-'
+    ignore:
+      - dependency-type: 'all'
+        update-types: ['version-update:semver-major']
     commit-message:
-      prefix: 'chore(deps)'
-    rebase-strategy: 'auto'
-    allow:
-      - dependency-type: 'direct'
-      - dependency-type: 'development'
-    versioning-strategy: increase-if-necessary
-    labels:
-      - 'dependencies'
-      - 'automerge'
+      prefix: 'deps'
+      include: 'scope'
+    target-branch: 'main'
