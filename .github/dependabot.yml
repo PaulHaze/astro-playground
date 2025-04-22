@@ -32,6 +32,9 @@ updates:
     ignore:
       - dependency-name: '*'
         update-types: ['version-update:semver-major']
+    allow:
+      - dependency-type: 'direct'
+      - dependency-type: 'development'
     commit-message:
       prefix: 'chore(deps)'
       include: 'scope'
