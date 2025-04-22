@@ -33,6 +33,6 @@ updates:
       - dependency-type: 'all'
         update-types: ['version-update:semver-major']
     commit-message:
-      prefix: 'deps'
+      prefix: 'chore(deps)'
       include: 'scope'
     target-branch: 'main'
