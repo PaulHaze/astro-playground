@@ -13,8 +13,4 @@ export default defineConfig({
 			iconDir: 'src/assets/icons',
 		}),
 	],
-	experimental: {
-		responsiveImages: true,
-		svg: true,
-	},
 });
